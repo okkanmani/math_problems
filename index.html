@@ -83,62 +83,128 @@
 
 <script>
 const quizData = [
-    { q: "A train travels 128 km in the morning and 156 km in the afternoon. How far does it travel in total?",
-      options: ["274 km","284 km","294 km","264 km"], answer: "284 km",
-      explanation: "Add the two distances: 128 + 156 = 284 km." },
-    { q: "Maria baked 48 cupcakes. She gave 12 to her neighbor, 15 to her friend, and kept the rest. How many cupcakes does she have left?",
-      options: ["21","20","18","19"], answer: "21",
-      explanation: "48 − (12 + 15) = 48 − 27 = 21." },
-    { q: "A box contains 9 packs of pencils. Each pack has 12 pencils. How many pencils are in the box?",
-      options: ["108","96","112","124"], answer: "108",
-      explanation: "9 × 12 = 108." },
-    { q: "Liam read 45 pages on Monday, 36 pages on Tuesday, and 55 pages on Wednesday. How many pages did he read in all?",
-      options: ["136","146","156","126"], answer: "136",
-      explanation: "45 + 36 + 55 = 136." },
-    { q: "A school has 432 students. If they are divided evenly into 18 classes, how many students are in each class?",
-      options: ["24","20","18","28"], answer: "24",
-      explanation: "432 ÷ 18 = 24." },
-    { q: "A baker made 250 cookies. He sold 175 cookies. How many cookies are left?",
-      options: ["85","75","65","95"], answer: "75",
-      explanation: "250 − 175 = 75." },
-    { q: "A rope is 6 meters long. It is cut into 4 equal pieces. How long is each piece?",
-      options: ["1.5 m","1.6 m","2 m","1.25 m"], answer: "1.5 m",
-      explanation: "6 ÷ 4 = 1.5 m." },
-    { q: "A factory produces 325 toys in January, 289 in February, and 342 in March. How many toys were made in total?",
-      options: ["946","956","944","954"], answer: "956",
-      explanation: "325 + 289 + 342 = 956." },
-    { q: "A bus carries 48 passengers per trip. How many passengers can it carry in 7 trips?",
-      options: ["316","336","346","356"], answer: "336",
-      explanation: "48 × 7 = 336." },
-    { q: "If 240 apples are packed into boxes of 12 apples each, how many boxes are needed?",
-      options: ["18","20","22","24"], answer: "20",
-      explanation: "240 ÷ 12 = 20." },
-    { q: "Sophia spent $18.50 on lunch and $24.75 on dinner. How much did she spend in total?",
-      options: ["$43.15","$43.25","$43.35","$43.05"], answer: "$43.25",
-      explanation: "18.50 + 24.75 = 43.25." },
-    { q: "A marathon is 42 kilometers long. If Sarah has already run 29 kilometers, how many kilometers are left?",
-      options: ["13","14","12","11"], answer: "13",
-      explanation: "42 − 29 = 13." },
-    { q: "A pack of markers costs $3.50. How much will 8 packs cost?",
-      options: ["$28.00","$27.50","$26.00","$28.50"], answer: "$28.00",
-      explanation: "3.50 × 8 = 28.00." },
-    { q: "There are 64 chairs in a hall. They are arranged in 8 equal rows. How many chairs are in each row?",
-      options: ["8","10","12","14"], answer: "8",
-      explanation: "64 ÷ 8 = 8." },
-    { q: "A bookstore sold 127 books on Monday and 145 on Tuesday. How many books did it sell in these two days?",
-      options: ["272","274","276","278"], answer: "272",
-      explanation: "127 + 145 = 272." },
-    { q: "125 + 378 = ?", options: ["493","503","513","523"], answer: "503",
-      explanation: "125 + 378 = 503." },
-    { q: "546 − 278 = ?", options: ["268","278","288","258"], answer: "268",
-      explanation: "546 − 278 = 268." },
-    { q: "18 × 14 = ?", options: ["242","252","232","262"], answer: "252",
-      explanation: "18 × 14 = 252." },
-    { q: "936 ÷ 12 = ?", options: ["77","78","79","76"], answer: "78",
-      explanation: "936 ÷ 12 = 78." },
-    { q: "72 × 9 = ?", options: ["638","648","658","628"], answer: "648",
-      explanation: "72 × 9 = 648." }
+  { 
+    q: "A farmer has 15 rows of apple trees. Each row has 24 trees. How many apple trees does the farmer have in total?",
+    options: ["360", "380", "350", "370"],
+    answer: "360",
+    explanation: "15 × 24 = 360."
+  },
+  { 
+    q: "A school bought 18 boxes of pencils. Each box contains 36 pencils. How many pencils did the school buy altogether?",
+    options: ["648", "628", "668", "638"],
+    answer: "648",
+    explanation: "18 × 36 = 648."
+  },
+  { 
+    q: "A factory produces 45 cars every day. How many cars will it produce in 30 days?",
+    options: ["1350", "1250", "1450", "1550"],
+    answer: "1350",
+    explanation: "45 × 30 = 1350."
+  },
+  { 
+    q: "There are 28 students in each class. If there are 16 classes, how many students are there in total?",
+    options: ["448", "458", "438", "468"],
+    answer: "448",
+    explanation: "28 × 16 = 448."
+  },
+  { 
+    q: "A bakery makes 125 loaves of bread each day. How many loaves will it make in a week (7 days)?",
+    options: ["875", "865", "885", "895"],
+    answer: "875",
+    explanation: "125 × 7 = 875."
+  },
+  { 
+    q: "A book has 250 pages. If a reader reads 4 books, how many pages will they read in total?",
+    options: ["1000", "1100", "900", "1200"],
+    answer: "1000",
+    explanation: "250 × 4 = 1000."
+  },
+  { 
+    q: "There are 32 chairs in each row of a theater. If there are 20 rows, how many chairs are there in total?",
+    options: ["640", "620", "660", "630"],
+    answer: "640",
+    explanation: "32 × 20 = 640."
+  },
+  { 
+    q: "A delivery truck carries 48 boxes per trip. How many boxes will it carry after 25 trips?",
+    options: ["1200", "1150", "1250", "1300"],
+    answer: "1200",
+    explanation: "48 × 25 = 1200."
+  },
+  { 
+    q: "Each pack of stickers contains 90 stickers. If a store sells 14 packs, how many stickers did it sell?",
+    options: ["1260", "1240", "1280", "1300"],
+    answer: "1260",
+    explanation: "90 × 14 = 1260."
+  },
+  { 
+    q: "A factory packs 65 chocolates into each box. How many chocolates are there in 40 boxes?",
+    options: ["2600", "2500", "2700", "2800"],
+    answer: "2600",
+    explanation: "65 × 40 = 2600."
+  },
+  { 
+    q: "A swimming pool is 12 meters long and 8 meters wide. What is the total area of the pool in square meters?",
+    options: ["96", "88", "100", "90"],
+    answer: "96",
+    explanation: "12 × 8 = 96."
+  },
+  { 
+    q: "A movie theater has 24 seats in each row and 18 rows. How many seats are there in total?",
+    options: ["432", "442", "422", "452"],
+    answer: "432",
+    explanation: "24 × 18 = 432."
+  },
+  { 
+    q: "A gardener plants 30 flowers in each garden. If there are 22 gardens, how many flowers are planted in all?",
+    options: ["660", "670", "650", "640"],
+    answer: "660",
+    explanation: "30 × 22 = 660."
+  },
+  { 
+    q: "A school library has 45 shelves. Each shelf holds 75 books. How many books are there in the library?",
+    options: ["3375", "3475", "3275", "3575"],
+    answer: "3375",
+    explanation: "45 × 75 = 3375."
+  },
+  { 
+    q: "Each box of oranges contains 20 oranges. A store has 150 boxes. How many oranges does the store have?",
+    options: ["3000", "3100", "2900", "2800"],
+    answer: "3000",
+    explanation: "20 × 150 = 3000."
+  },
+  { 
+    q: "A factory produces 120 toys every day. How many toys does it produce in 50 days?",
+    options: ["6000", "6100", "5900", "6200"],
+    answer: "6000",
+    explanation: "120 × 50 = 6000."
+  },
+  { 
+    q: "A car rental company has 27 cars. Each car is rented out 16 times in a month. How many rentals were there in total?",
+    options: ["432", "422", "442", "452"],
+    answer: "432",
+    explanation: "27 × 16 = 432."
+  },
+  { 
+    q: "A farmer feeds 36 cows. Each cow eats 8 kg of hay per day. How many kilograms of hay are needed per day for all the cows?",
+    options: ["288", "278", "298", "268"],
+    answer: "288",
+    explanation: "36 × 8 = 288."
+  },
+  { 
+    q: "A box contains 60 chocolates. How many chocolates are in 23 boxes?",
+    options: ["1380", "1400", "1360", "1420"],
+    answer: "1380",
+    explanation: "60 × 23 = 1380."
+  },
+  { 
+    q: "A school orders 75 packs of notebooks. Each pack has 12 notebooks. How many notebooks were ordered in total?",
+    options: ["900", "920", "880", "940"],
+    answer: "900",
+    explanation: "75 × 12 = 900."
+  }
 ];
+
 
 let currentQuestion = 0;
 let userAnswers = Array(quizData.length).fill(null);
